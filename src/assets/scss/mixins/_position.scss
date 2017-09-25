@@ -1,0 +1,61 @@
+// padding
+@mixin padding($top, $right, $bottom:null, $left:null) {
+  @if $left == null and $bottom == null {
+    padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'};
+  } @else if $left == null or $left == $right {
+    padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
+  } @else {
+    padding: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+  }
+}
+
+// padding top
+@mixin padding-top($number) {
+  padding-top: #{ round($number * $leading) + 'px'};
+}
+
+// padding bottom
+@mixin padding-bottom($number) {
+  padding-bottom: #{ round($number * $leading) + 'px'};
+}
+
+// padding right
+@mixin padding-right($number) {
+  padding-right: #{ round($number * $leading) + 'px'};
+}
+
+// padding left
+@mixin padding-left($number) {
+  padding-left: #{ round($number * $leading) + 'px'};
+}
+
+// Margin
+@mixin margin($top, $right, $bottom:null, $left:null) {
+  @if $left == null and $bottom == null {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'};
+  } @else if $left == null or $left == $right {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'};
+  } @else {
+    margin: #{ $top * $leading + 'px'} #{ $right * $leading + 'px'} #{ $bottom * $leading + 'px'} #{ $left * $leading + 'px'};
+  }
+}
+
+// Margin-left
+@mixin margin-left($number) {
+  margin-left: #{ round($number * $leading) + 'px'};
+}
+
+// Margin-right
+@mixin margin-right($number) {
+  margin-right: #{ round($number * $leading) + 'px'};
+}
+
+// Margin-bottom
+@mixin margin-bottom($number) {
+  margin-bottom: #{ round($number * $leading) + 'px'};
+}
+
+// Margin-top
+@mixin margin-top($number) {
+  margin-top: #{ round($number * $leading) + 'px'};
+}

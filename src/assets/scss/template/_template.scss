@@ -1,9 +1,9 @@
 // These are the styles to make some of the templates look extra nice.
 // Feel free to remove these styles for production!
 
-// Body Styles 
+// Body Styles
 body,
-html, 
+html,
 .body {
   background: #f3f3f3 !important;
 }
@@ -56,4 +56,104 @@ table.button.google table td {
 
 .wrapper.secondary {
   background: #f3f3f3;
+}
+
+// body
+body, html, .body  {
+  background-color: lighten($gigazone-gray, 50%) !important;
+}
+
+// Typography overrides from defaults
+h1, h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $gigazone-black;
+  hyphens: none;
+}
+
+h2, h3, h4, h5, h6 {
+  color: $gigazone-gray;
+  @include margin-bottom(.875);
+}
+
+h2 {
+  border-bottom: 3px solid $gigazone-orange;
+}
+
+h3 {
+  border-bottom: 3px solid lighten($gigazone-gray, 25%);
+}
+
+h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  @include font-size(1.375);
+}
+
+// Full Width Headers
+.header {
+  background: $gigazone-gray url($header-background-image) top left repeat;
+}
+
+// greeting
+.greeting {
+  color: lighten($gigazone-gray, 25%);
+  @include font-size(1.875);
+
+}
+
+// lists
+ul {
+  padding: 0;
+  @include margin(0, 0, 1, 1);
+
+}
+ol {
+  @include margin(0,0,1,0);
+  @include padding(0,0,0,1.75);
+}
+
+ol li {
+  @include padding(0,.5);
+  @include margin-bottom(.5);
+}
+
+ul li {
+  background: transparent url($bullet-icon) floor($global-padding * .0125) floor($global-padding * .25) no-repeat;
+  list-style: none;
+  @include padding(0, 1.125);
+  @include margin-bottom(0.5);
+}
+
+// footer
+
+.footer {
+  &-icon {
+   @include padding(1, .5);
+  }
+}
+
+// buttons
+// table.button table td a
+
+table.button {
+  table {
+    td {
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+// utility
+
+.no-border {
+  border: none;
+}
+
+.txt-center {
+  text-align: center;
 }
